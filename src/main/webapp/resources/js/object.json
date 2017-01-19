@@ -1,0 +1,24 @@
+{
+  "users": {
+    "ray.villalobos@gmail.com": {
+      "firstName": "Ray",
+      "lastName": "Villalobos",
+      "email": "ray.villalobos@gmail.com",
+      "joined": {
+        "month": "January",
+        "day": 12,
+        "year": 2012,
+      }
+    },
+    "john.jones@gmail.com":{
+      "firstName": "John":
+      "lastName": "Jones",
+      "email": "john.jones@gmail.com",
+      "joined": {
+        "month": "April",
+        "day": 28,
+        "year": 2010,
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Page</title>
+</head>
+<body>
+<table>
+<tr th:each="data : ${sevenElevenData}"><br><br>
+    Id: <td th:text="${data.id}">asdf</td>
+    <br>
+    Name: <td th:text="${data.field1}">asdfasd</td>
+    <br>
+    Email: <td th:text="${data.field2}">asdfasdf</td>
+    <br>
+    Tel. Numbers: <td th:text="${data.tel_no}">asdfasdf</td>
+</tr>
+</table>
+
+    <br>
+<br>
+<h1>Chat Conversation End</h1>
+
+
+</body>
+</html>

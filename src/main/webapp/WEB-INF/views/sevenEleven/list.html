@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Page</title>
+</head>
+<body>
+<table border="1">
+    <tr th:each="member : ${sevenElevenData}"><br>
+        <td><a th:text="${member.id}" th:href="@{/userinfo/{id}(id=${member.id})}"></a></td>
+        <td th:text="${member.field1}"></td>
+        <td th:text="${member.field2}"></td>
+        <td th:text="${member.tel_no}"></td>
+</table>
+</body>
+</html>
