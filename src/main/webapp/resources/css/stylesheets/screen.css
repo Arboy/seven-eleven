@@ -689,3 +689,10 @@ footer {
 .has-error{
   border: solid 1px red!important;
 }
+
+/*Error Div*/
+.alert-danger{
+  margin-left: 172px;
+  font-size: 12px;
+  color: red;
+}

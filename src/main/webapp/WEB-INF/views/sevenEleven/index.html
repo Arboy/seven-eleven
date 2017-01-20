@@ -48,19 +48,19 @@
             <form id="regForm" role="form" data-smk-icon="glyphicon-remove-sign" action="/thankyou" method="post">
                 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                 <div id="message"></div>
-                <label class="labelDown">
+                <label id="field1Div" class="labelDown">
                     <span>
                         Name
                     </span>
                     <input id="field1" type="text" class="textarea-field" name="field1" value=""/> <!--data-smk-pattern="^[a-zA-Z\s]{3,}$" required-->
                 </label>
-                <label class="labelDown">
+                <label id="field2Div" class="labelDown">
                     <span>
                         Email
                     </span>
                     <input id="field2" type="text" class="textarea-field" name="field2" value="" /><!--data-smk-pattern="^[a-zA-Z\s]{3,}$" required-->
                 </label>
-                <label class="labelDown">
+                <label id="tel_noDiv" class="labelDown">
                     <span>
                         Mobile Number
                     </span>
@@ -344,15 +344,40 @@
                            $("#regForm").slideUp('slow');
                            $("#sec1").hide().fadeIn().html("<p class='text-center alert alert-success'><h1>Successfully submitted!</h1><p>Thank you <b>"+response.field1+"</b>.</p></p>")
                        }else {
-                          /* $(".has-error").removeClass("has-error");
+                           /*$(".has-error").removeClass("has-error");
                            $.each(response.errors,function (a,b) {
-                               $("#"+b).hide().fadeIn().addClass("has-error");
-
-                           });*/
+                               $("#"+b).hide().fadeIn().addClass("has-error");*/
+/*
                           $("#message").empty();
-                          $.each(response.errors, function(a,b){
-                                $("#message").append(b + "<br>");// use addClass("has-error")
-                          });
+                          $.each(response.errors, function(a,b) {
+                              $("#message").append(b + "<br>");// use addClass("has-error")
+                          });*/
+
+
+                           /*$(".has-error").hide();
+
+                           $.each(response.errors,function (a,b) {
+                            if(b == "field1") {
+                                $(".has-error" + b).show();
+                                $(".has-error" + b).text("Name should not be empty!").css({"font-size":"12px", "color":"red", "margin-right":""});
+                            }else if(b == "field2") {
+                                $(".has-error" + b).show();
+                                $(".has-error" + b).text("Email should not be empty!").css({"font-size":"12px", "color":"red", "margin-right":""});
+                            }else if(b == "tel_no") {
+                                $(".has-error" + b).show();
+                                $(".has-error" + b).text("Mobile should not be empty!").css({"font-size":"12px", "color":"red", "margin-right":""});
+                            }*/
+                           $("p.error").fadeOut();
+                           $("#regForm label").removeClass("has-error");
+                           $(".errors").remove();
+                           $('.textarea-field').css("background","rgb(250, 255, 189)");
+                           $.each(response, function (a,b) {
+                               $("#"+a+"Div").hide().fadeIn().addClass("has-error");
+                               $('.has-error').children('input').css("background","pink");
+                               $("#"+a).next().remove();
+                               $("#"+a).after("<p class='alert-danger error'>"+b+"</p>");
+                           });
+
                        }
                 }
 
