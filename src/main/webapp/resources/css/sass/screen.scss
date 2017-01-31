@@ -87,6 +87,11 @@ body {
       text-align: center;
       font: bold 35px 'PT Sans', sans-serif;
       width: 70%;
+      @media screen and (max-width: 1366px) {
+        font: bold 37px 'PT Sans', sans-serif;
+        margin-top: 20px;
+        text-align: left;
+      }
     }
     &#paraRegular {
       margin: auto;
@@ -94,6 +99,10 @@ body {
       font: 25px 'PT Sans', sans-serif;
       width: 70%;
       padding: 15px 0 50px 0;
+      @media screen and (max-width: 1366px) {
+        font: 27px 'PT Sans', sans-serif;
+        text-align: left;
+      }
     }
   }
 }
@@ -108,18 +117,26 @@ body {
 .clearfix {
   overflow: auto;
   clear: both;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 nav{
-  &#nav1{
+  &#nav1 {
     margin: 30px auto;
     border: 3px solid rgb(12, 108, 67);
     width: 80%;
     text-align: center;
+    @media screen and (max-width: 1366px){
+      display: none;
+    }
+
     ul{
       li{
         display:inline-block;
         &:hover{
           background: url("../../images/link_hover.png") no-repeat center bottom;
+
         }
         a {
           text-decoration: none;
@@ -127,14 +144,16 @@ nav{
           font: 30px 'PT Sans', sans-serif;
           display: block;
           padding: 20px 60px 20px 60px;
+          }
         }
-      }
+
     }
   }
   &#nav2 {
     @include nav2_def;
     ul {
       padding-top: 20px;
+
       li {
         &.li2 {
           @include nav2_line;
@@ -246,12 +265,21 @@ section {
   img {
     float: left;
     margin: -210px 0 0 -190px;
+    @media screen and(max-width: 1366px) {
+      margin-left: 357px;
+      margin-top: -89px;
+
+    }
   }
 }
 article{
   margin-bottom: 20px;
   font: bold 30px 'PT Sans', sans-serif;
   color: #ff0005;
+  @media screen and (max-width: 1366px) {
+    margin-left: -1px;
+
+  }
 }
 
 .textarea-field{
@@ -260,6 +288,9 @@ article{
   background-color: #e0e0e0;
   border-color: transparent;
   font-size: 17px;
+  @media screen and (max-width: 1366px){
+    margin-right: 222px;
+  }
 }
 
 .textarea-field-month{
@@ -270,6 +301,9 @@ article{
   border-color: transparent;
   font-size: 17px;
   margin:5px;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 
 .textarea-field-day{
@@ -280,6 +314,9 @@ article{
   border-color: transparent;
   font-size: 17px;
   margin:5px;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 
 .textarea-field-year{
@@ -290,11 +327,17 @@ article{
   border-color: transparent;
   font-size: 17px;
   margin: -5px 5px -5px 5px;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 
 .select {
   position: relative;
   display: inline-block;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 
 .select select {
@@ -305,6 +348,9 @@ article{
   border: 0;
   border-radius: 5px;
   background: #e6e6e6;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 
 .select__arrow {
@@ -315,6 +361,9 @@ article{
   border-style: solid;
   border-width: 8px 7px 0 7px;
   border-color: #ff5100 transparent transparent transparent;
+  @media screen and (max-width: 1366px){
+    display: none;
+  }
 }
 
 #sec1{
@@ -325,6 +374,18 @@ article{
 }
 
 div {
+  &#sp2 {
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+    @media screen and (max-width: 1366px){
+      margin-left: 130px;
+      font: 25px 'PT Sans', sans-serif;
+      text-align: left;
+      width: 520px;
+      margin-top: -37px;
+    }
+  }
 
   &#form-style-2 {
     font: 20px 'PT Sans', sans-serif;
@@ -335,6 +396,10 @@ div {
     -webkit-box-shadow: 0px;
     -moz-box-shadow: 0px;
     box-shadow: 0px 0px 20px 1px #5c5c5c;
+    @media screen and (max-width: 1366px){
+      box-shadow: none;
+      margin-left: -165px;
+    }
     label {
       &.labelDown {
         display: block;
@@ -355,15 +420,16 @@ div {
         display: inline-block;
         padding-right: 5px;
         text-align: right;
+        @media screen and (max-width: 1366px){
+          margin-left: 48px;
+        }
         &#sp1 {
           width: 110px;
           display: inline-block;
           text-align: right;
-        }
-        &#sp2 {
-          width: 300px;
-          display: inline-block;
-          text-align: left;
+          @media screen and (max-width: 1366px){
+            margin-left: -47px;
+          }
         }
         &#sp3 {
           width: 110px;
@@ -386,6 +452,9 @@ div {
           padding: 0;
           top: 16px;
           right: 32px;
+          @media screen and (max-width: 1366px){
+            display: none;
+          }
         }
         &#arrMonth {
           width: 0;
@@ -393,6 +462,9 @@ div {
           padding: 0;
           top: 16px;
           right: 127px;
+          @media screen and (max-width: 1366px){
+            display: none;
+          }
         }
         &#arrDay {
           width: 0;
@@ -400,22 +472,56 @@ div {
           padding: 0;
           top: 16px;
           right: 223px;
+          @media screen and (max-width: 1366px){
+            display: none;
+          }
         }
         &#spGender {
           width: 150px;
           display: inline-block;
           text-align: right;
+          @media screen and (max-width: 1366px){
+            margin-left: 58px;
+          }
         }
         &#control-group {
           width: 300px;
           display: inline-block;
           text-align: left;
+          @media screen and (max-width: 1366px){
+            margin-left: 150px;
+          }
+        }
+        &#moNo{
+          @media screen and (max-width: 1366px){
+            margin-left: 128px;
+          }
+        }
+        &#DOB{
+          @media screen and (max-width: 1366px){
+            display: none;
+          }
+        }
+        &#name{
+          @media screen and (max-width: 1366px){
+            margin-left: 48px;
+          }
+        }
+        &#email{
+          @media screen and (max-width: 1366px){
+            margin-left: 48px;
+          }
         }
       }
       input {
         display: inline;
         margin: 5px 10px;
         width: 60%;
+        @media screen and (max-width: 1366px){
+          width: 80%;
+          margin-left: 148px;
+
+        }
       }
     }
     input[type=checkbox]{
@@ -423,6 +529,10 @@ div {
       height: 20px;
       background-color: #e0e0e0;
       border-color: transparent;
+      /*@media screen and (max-width: 1366px) {
+        margin-right: -23px;
+
+      }*/
     }
 
     input[type=submit],
@@ -436,6 +546,9 @@ div {
       color: white;
       margin-right: 33px;
       border-color: transparent;
+      @media screen and (max-width: 1366px){
+        margin-right: 160px;
+      }
     }
     input[type=submit]:hover,
     input[type=button]:hover {
@@ -525,44 +638,20 @@ footer {
   background-color: #006B41;
   margin: 130px auto 0 auto;
   text-align: center;
-}
-
-
-
-//1300,979,767,480
-
-@media only screen and (max-width: 1366px) {
-  body {
-    background-color: white;
+  @media screen and (max-width: 1366px){
+    margin: 268px auto 0 auto;
   }
 }
 
-@media only screen and (max-width: 1300px) {
-  body {
-    background-color: white;
-  }
-
-}
-
-@media only screen and (max-width: 979px) {
-  body {
-    background-color: #38c1ff;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  body {
-    background-color: #ffdebb;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  body {
-    background-color: #52ff3d;
-  }
-}
 .has-error{
   border: solid 1px red!important;
+ // @media screen and (max-width: 1366px){
+    //margin-left: 130px!important;
+  //}
 }
-
+.alert-danger {
+  @media screen and (max-width: 1366px){
+    margin-left: 147px;
+  }
+}
 

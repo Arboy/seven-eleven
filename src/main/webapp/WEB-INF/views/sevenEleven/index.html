@@ -49,25 +49,25 @@
                 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                 <div id="message"></div>
                 <label id="field1Div" class="labelDown">
-                    <span>
+                    <span id="name">
                         Name
                     </span>
                     <input id="field1" type="text" class="textarea-field" name="field1" value=""/> <!--data-smk-pattern="^[a-zA-Z\s]{3,}$" required-->
                 </label>
                 <label id="field2Div" class="labelDown">
-                    <span>
+                    <span id="email">
                         Email
                     </span>
                     <input id="field2" type="text" class="textarea-field" name="field2" value="" /><!--data-smk-pattern="^[a-zA-Z\s]{3,}$" required-->
                 </label>
                 <label id="tel_noDiv" class="labelDown">
-                    <span>
+                    <span id="moNo">
                         Mobile Number
                     </span>
                     <input id="tel_no" type="text" class="textarea-field" name="tel_no" value="" maxlength="11" /><!-- data-smk-pattern="^[a-zA-Z\s]{3,}$" required -->
                 </label>
                 <label class="select labelDown">
-                    <span>
+                    <span id="DOB">
                         Date of Birth
                     </span>
                     <select class="textarea-field-month" name="DOBMonth">
@@ -205,9 +205,9 @@
                 <label class="paraSmall labelDown">
                     <span id="sp1"><input type="checkbox" value=""/>
                     </span>
-                    <span id="sp2">
+                    <div id="sp2">
                         Proin sit amet lectus venenatis, consectetur magna vitae, convallis diam. Nullam iaculis.
-                    </span>
+                    </div>
                 </label>
                 <label class="clearfix labelDown">
                     <span>
