@@ -1,3 +1,4 @@
+$("body").fadeOut();
 /*
 /!**
  * Created by JPMPC-B209 on 11/24/2016.

@@ -5,6 +5,26 @@
     <title>Welcome to 7 Eleven</title>
     <link rel="stylesheet" href="../../../resources/css/stylesheets/screen.css" >
 </head>
+<body>
+<div id="icon_menu">
+    <a href="#" class="icon">
+        <div class="mobile_menu">
+            <div class="div_menu"></div>
+            <div class="div_menu"></div>
+            <div class="div_menu"></div>
+        </div>
+    </a>
+    <ul class="list-menu" style="display:none;">
+        <li><a href="#">Praesentium</a></li>
+        <li><a href="#">Voluptatum</a></li>
+        <li><a href="#">Dignissimos</a></li>
+        <li><a href="#">Blanditiis</a></li>
+    </ul>
+    <div>
+        <input class="input-search">
+    </div>
+    <img class="search-icon" src="../../../resources/images/search_icon.png">
+</div>
     <header id="header_bg">
         <a href="#">
             <img id="logo_bg" src="../../../resources/images/logo.png" alt="Text/Photo" />
@@ -324,7 +344,10 @@
     <script src="../../../resources/js/plugin.js"></script>
     <!--<script src="../../../resources/js/app.js"></script>-->
     <script>
-
+        $(".icon").click(function (e) {
+            e.preventDefault();
+            $(".list-menu").toggle();
+        });
         $('#submit-Btn').click(function (e) {
             e.preventDefault();
             //console.log($('#regForm').serialize());
