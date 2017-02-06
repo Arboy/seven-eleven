@@ -20,10 +20,10 @@
         <li><a href="#">Dignissimos</a></li>
         <li><a href="#">Blanditiis</a></li>
     </ul>
-    <div>
+    <div class="right-pane">
         <input class="input-search">
+        <img class="search-icon" src="../../../resources/images/search_icon.png">
     </div>
-    <img class="search-icon" src="../../../resources/images/search_icon.png">
 </div>
     <header id="header_bg">
         <a href="#">
@@ -244,6 +244,129 @@
         </div>
     </section>
     <footer>
+        <div id="footer_mobile">
+            <ul>
+                <li>
+                    <a class="f-mobile" href="#">
+                        SUSPENDISSE
+                    </a>
+                    <div class="f-list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Quisque
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Faucibus
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sapien
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Hendrerit
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <a class="f-mobile" href="#">
+                        PORTA
+                    </a>
+                    <div class="f-list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Mauris
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Suscipit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    At ipsum
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Vehicula
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="line2"></div>
+                <li>
+                    <a class="f-mobile" href="#">
+                        FEUGIAT
+                    </a>
+                    <div class="f-list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Pellentesque
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Accumsan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Velit in urna
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Faucibus
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="line3"></div>
+                <li>
+                    <a class="f-mobile" href="#">
+                        PLACERAT
+                    </a>
+                    <div class="f-list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Vitae
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Convallis
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Augue
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Aliquam
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <nav id="nav2" class="nav2">SUSPENDISSE
             <ul>
                 <li class="li2">
@@ -261,8 +384,8 @@
                         Sapien
                     </a>
                 </li>
-                <li class="li2"
-                ><a class="link_nav2"  href="#">
+                <li class="li2">
+                    <a class="link_nav2"  href="#">
                     Hendrerit
                 </a>
                 </li>
@@ -344,9 +467,20 @@
     <script src="../../../resources/js/plugin.js"></script>
     <!--<script src="../../../resources/js/app.js"></script>-->
     <script>
+        $(".f-mobile").click(function (e) {
+            e.preventDefault();
+            var footerMenu = $(this).siblings("div.f-list");
+
+            if ( footerMenu.is(":visible") ){
+                footerMenu.slideToggle();
+            }else{
+            $("div.f-list").slideUp();
+            footerMenu.slideToggle();
+            }
+        });
         $(".icon").click(function (e) {
             e.preventDefault();
-            $(".list-menu").toggle();
+            $(".list-menu").slideToggle();
         });
         $('#submit-Btn').click(function (e) {
             e.preventDefault();
