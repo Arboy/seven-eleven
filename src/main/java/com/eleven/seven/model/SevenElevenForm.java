@@ -24,6 +24,7 @@ public class SevenElevenForm {
     private int id;
 
     @NotBlank (message = "Name should not be empty!")
+    @Pattern(regexp = "^[\\p{L} .'-]+$", message = "Name field should contain letters only!")
     //@NotEmpty (message = "Name Field should not be empty!")
     private String field1;
     @NotBlank (message = "Email should not be empty!")
